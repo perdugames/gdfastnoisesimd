@@ -1,0 +1,28 @@
+# SCsub
+Import('env')
+
+module_env = env.Clone()
+module_env.Append(CPPPATH=['FastNoiseSIMD', '.'])
+
+src_list = Split("""gdfastnoisesimd.cpp
+                    register_types.cpp
+                    FastNoiseSIMD/FastNoiseSIMD_avx512.cpp
+                    FastNoiseSIMD/FastNoiseSIMD_internal.cpp
+                    FastNoiseSIMD/FastNoiseSIMD_neon.cpp
+                    FastNoiseSIMD/FastNoiseSIMD.cpp
+                    """)
+
+module_env.Append(CXXFLAGS=['-std=c++11'])
+module_env.add_source_files(env.modules_sources, src_list)
+
+obj_avx2 = env.Clone()
+obj_msse41 = env.Clone()
+obj_sse2 = env.Clone()
+
+obj_avx2.Append(CXXFLAGS=['-std=c++11', '-march=core-avx2'])
+obj_msse41.Append(CXXFLAGS=['-std=c++11', '-msse4.1'])
+obj_sse2.Append(CXXFLAGS=['-std=c++11', '-msse2'])
+
+obj_avx2.add_source_files(env.modules_sources, 'FastNoiseSIMD/FastNoiseSIMD_avx2.cpp')
+obj_msse41.add_source_files(env.modules_sources, 'FastNoiseSIMD/FastNoiseSIMD_sse41.cpp')
+obj_sse2.add_source_files(env.modules_sources, 'FastNoiseSIMD/FastNoiseSIMD_sse2.cpp')
