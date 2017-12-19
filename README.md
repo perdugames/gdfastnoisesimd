@@ -3,7 +3,7 @@
 </p>
 
 # GDFastNoiseSIMD
-gdfastnoisesimd is a module for the [FastNoiseSIMD](https://github.com/Auburns/FastNoiseSIMD/) lib. Thanks to [@Auburns](https://github.com/Auburns/).
+gdfastnoisesimd is a Godot 3.0 module for the [FastNoiseSIMD](https://github.com/Auburns/FastNoiseSIMD/) lib. Thanks to [@Auburns](https://github.com/Auburns/).
 
 FastNoiseSIMD is a library for noise generation that uses SIMD(Single Instruction, Multiple Data) instructions.
 
