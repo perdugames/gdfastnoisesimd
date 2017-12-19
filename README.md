@@ -39,7 +39,7 @@ func _ready():
 
 ## DOC
 
-coming soon
+[Documentation](https://github.com/PerduGames/gdfastnoisesimd/wiki/DOC)
 
 ## API
 
