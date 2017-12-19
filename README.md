@@ -3,7 +3,8 @@
 </p>
 
 # GDFastNoiseSIMD
-gdfastnoisesimd is a module for the [FastNoiseSIMD](https://github.com/Auburns/FastNoiseSIMD/) lib.
+gdfastnoisesimd is a module for the [FastNoiseSIMD](https://github.com/Auburns/FastNoiseSIMD/) lib. Thanks to [@Auburns](https://github.com/Auburns/).
+
 
 ## warning
 If you are having problems compiling or getting errors while using the library in Godot, try commenting the line **#define FN_COMPILE_AVX2** in the file **FastNoiseSIMD.h** which is inside the **FastNoiseSIMD** directory in the **gdfastnoisesimd** module (Probably already be commented out by default).
