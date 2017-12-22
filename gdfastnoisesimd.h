@@ -41,6 +41,7 @@ protected:
 public:
 
     GDFastNoiseSIMD();
+    ~GDFastNoiseSIMD();
 
     enum TypesNoise {
         VALUE,

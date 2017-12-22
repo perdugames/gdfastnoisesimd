@@ -30,6 +30,10 @@ GDFastNoiseSIMD::GDFastNoiseSIMD(){
 
 }
 
+GDFastNoiseSIMD::~GDFastNoiseSIMD(){
+    delete myNoise;
+}
+
 // -------------------ALL--------------------------------------------
 
 int GDFastNoiseSIMD::getSIMDLevel(void){
